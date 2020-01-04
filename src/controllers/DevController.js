@@ -3,7 +3,7 @@ const Dev = require('../models/Dev');
 
 module.exports = {
   async index(req, res) {
-    const { user } = req.headers;
+    const { user } = req.headers;    
 
     const loogedDev = await Dev.findById(user);
 
@@ -24,7 +24,7 @@ module.exports = {
     const userExist = await Dev.findOne({ user: username });
 
     if (userExist) {
-      return res.json({ error: `'Usuário já cadastrado (${username}) !'` });
+      return res.json(userExist);
     }
 
     const response = await axios.get(`https://api.github.com/users/${username}`);
