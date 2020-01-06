@@ -19,7 +19,7 @@ io.on('connection', socket => {
 });
 
 mongoose.connect(
-  'mongodb+srv://robighetti:tindev2019@tindev-1sdbm.mongodb.net/tindev?retryWrites=true&w=majority',
+  'mongodb+srv://robighetti:nodeJSstack@treinamentos-1sdbm.mongodb.net/oministack9?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
